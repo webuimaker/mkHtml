@@ -1,0 +1,858 @@
+@font-face {
+font-family: 'FontAwesome';
+src: url('../fonts/FontAwesome.eot?#iefix') format('embedded-opentype'),  
+   url('../fonts/FontAwesome.otf')  format('opentype'),
+   url('../fonts/FontAwesome.woff') format('woff'), 
+   url('../fonts/FontAwesome.ttf')  format('truetype'), 
+   url('../fonts/FontAwesome.svg#FontAwesome') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,600,700|Poppins:300,400,600');
+
+font-family: 'Roboto', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Oswald', sans-serif;
+
+
+
+
+a,li, button{-webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;}
+
+a:hover, li:hover, button:hover{-webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;}
+
+
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+
+html body{font-size: 16px;font-family: 'Roboto', sans-serif; font-weight:400; color:#272b2d;}
+body.home{background:url(../images/body-bg-image.jpg)repeat; background-position:center;position: relative; float: left;width: 100%;height: 100%;}
+body.home div canvas {width: 100% !important;  position:absolute; left:0; top:auto; z-index:-1	}
+body.home div div canvas {display: none !important;}
+.home-header {float: left;width: 100%;padding: 40px;}
+.inner-home-sec {padding: 0;}
+body.inner-page .inner-home-sec {padding: 0;}
+.home-header .left-menu {float: left;}
+.home-header .left-menu {float: left;}
+.button-sec {float: right;}
+.home-header .left-menu span.toggle-link {font-size: 14px;color: #272b2d; float: left;width: 100%; /*padding: 10px 0; */}
+.home-header .left-menu span.toggle-link span{margin:0 0 0 -10px; font-family: 'Roboto', sans-serif; font-weight:400;}
+.button-sec a {display: none;}
+.button-sec a.get-touch {background: #2982a6;color: #fff;text-transform: uppercase;font-size: 14px;font-family: 'Roboto', sans-serif; font-weight:400;
+ padding: 10px 30px; display: inline-block; border-radius: 40px; }
+.button-sec a.get-touch:hover{text-decoration:none; background:#136b8f;} 
+.home-header .left-menu a:hover{text-decoration:none; color:#272b2d;}
+
+.home-middle-sec {float: left;width: 100%;text-align: center;padding: 8% 0;}
+.home-middle-sec p.heading {margin: 0 0 10px;font-size: 32px;color: #272b2d; font-family: 'Roboto', sans-serif;font-weight:300;}
+.home-middle-sec h1 {margin: 0;font-family: 'Roboto', sans-serif;font-weight:700;font-size: 76px;position: relative; padding: 0 0 30px; }
+.home-middle-sec h1::after {position: absolute;content: "";width: 100px;height: 5px;	background: #2982a6;left: 0;right: 0;margin: 0 auto;bottom: 0;}
+.home-middle-sec p.sub-heading {margin: 30px 0 0;font-size: 24px;color: #272b2d;}
+
+.home-bottom-sec {float: left;
+    width: calc(100% - 40px);
+    padding: 0;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;}
+.home-bottom-sec ul {	padding: 0;	margin: 0;}
+.home-bottom-sec ul li {float: left;list-style: none; width: 33.3%;}
+.home-bottom-sec ul li:first-child a img{margin:30px 0 0;}
+.home-bottom-sec ul li.drop-icon {text-align: center;}
+.home-bottom-sec ul li.drop-icon a {background: #f6f6f6;display: inline-block;border-radius: 50%;position: relative;width: 62px;height: 62px;}
+.home-bottom-sec ul li.drop-icon a img {margin: 0 auto;padding: 30px 0 0;}
+.home-bottom-sec ul li.drop-icon a::before {position: absolute;	content: "";border: 2px solid #f7f7f7;width: 75px;height: 75px;left: -6px;right: 0;
+	margin: 0 auto;	top: -6px;border-radius: 50%;}
+
+body #myNav.overlay {background: rgba(25,57,88, 0.5); z-index: 2;}
+body #myNav.overlay .closebtn {left:40px;color: #000;font-weight: normal;	max-width: 300px;padding: 0 0 0 0px;/*background: #e9edef;*/
+ top: 40;  z-index: 1;}
+ body #myNav.overlay .closebtn img{max-width:38px;}
+body #myNav.overlay .closebtn:hover{text-decoration:none;} /*
+body #myNav.overlay .closebtn:before{position:absolute; content:"";border: 2px solid #000;width: 38px;height: 38px;
+ border-radius: 50%; top: 40px;left:40px;}*/
+body .overlay-content {margin: 0;top: 0;background: #e9edef;max-width: 300px;width: 100%;height: 100%; box-shadow: 0 0 2px 2px #5f5f5f;
+padding: 10% 2.5%;text-align: left;}
+body .overlay-content .inner-sec-overlay a {float: left;width: 100%;padding: 0 0 25px;margin: 0 0 30px;
+border-bottom: 1px solid #bfc9d1;}
+body .overlay-content .inner-sec-overlay a span {font-size: 14px;float: left;width: 100%;text-transform: uppercase;	color: #272b2d;
+ font-family: 'Roboto', sans-serif; font-weight:300;}
+body .overlay-content .inner-sec-overlay a span.sub-link{ font-weight:700;  text-transform:initial; font-size:24px;} 
+.close-pos {position: fixed;}
+body	 .overlay-content .inner-sec-overlay a:hover span.sub-link{color:#2982a6;}
+.bottom-overlay {position: absolute;width: 100%;bottom: 40px;}
+.bottom-overlay ul {padding: 0;margin: 0;}
+.home-header .left-menu .overlay-content .bottom-overlay ul li a {border: none !important; display: block !important;padding: 0 !important;
+ margin: 0 10px 0 0;}
+
+.bottom-overlay a.menu-linked {display: none;}
+.home-header .left-menu .overlay-content.close-pos a.menu-linked {display: none;}
+.bottom-overlay ul li {display: inline-block;vertical-align:middle;}
+.bottom-overlay ul li p{margin:0; text-transform:uppercase; font-size:14px; font-family: 'Roboto', sans-serif; font-weight:300;}
+
+
+
+/*------------------------ About Page CSS Start Here ------------------------*/
+
+body.inner-page{background:url(../images/inner-body-bg-img.jpg)no-repeat; background-size:100% 100%; background-position:center;position: relative;}
+.home-header.inner-header .inner-home-sec {padding: 0 0%;}
+.banner-sec {float: left;width: 100%;margin: 40px 0 0;position: relative;}
+.banner-sec img {width: 100%;}
+.banner-sec .caption {position: absolute;top: 0;width: 100%;left: 0;max-width: 1170px;right: 0;margin: 0 auto;padding: 0 80px;height: 100%;}
+
+
+@media (min-width: 576px) {
+.banner-sec .caption{max-width:100%; padding:0 3%;}
+}
+
+@media (min-width: 768px) {
+.banner-sec .caption{max-width:100%; padding:0 3%;}
+}
+
+@media (min-width: 992px) {
+.banner-sec .caption{max-width:100%; padding:0 3%;}
+}
+
+@media (min-width: 1200px) {
+.banner-sec .caption{max-width:100%; padding:0 3%;}
+}
+
+@media (min-width: 1500px) {
+.banner-sec .caption{max-width:100%; padding:0 3%;}
+}
+
+
+.banner-sec .caption .heading-caption h2{font-family: 'Roboto', sans-serif; font-weight:300; color:#c4c4c4; font-size:52px; }
+.banner-sec .caption .banner-desc p{font-family: 'Roboto', sans-serif; font-weight:300; font-size:24px; color:#c4c4c4;}
+.banner-sec .caption .banner-desc p a{color:#2982a6;}
+.banner-sec .caption .banner-desc p a:hover{color:#fff; text-decoration:none;}
+.banner-sec .caption .heading-caption {margin: 60px 0 0;}
+.banner-sec .caption .banner-desc {position: absolute;bottom: 55px;}
+
+.about-me {float: left;	width: 100%;}
+.inner-about-sec {background: #fff;padding:70px;}
+.about-me  h3{font-family: 'Roboto', sans-serif; font-weight:700; font-size:32px; color:#272b2d; margin:0 0 0;}
+.about-me h4{font-family: 'Roboto', sans-serif; font-weight:400; font-size:22px; color:#272b2d;margin: 25px 0 25px;}
+.about-me p{font-family: 'Roboto', sans-serif; font-weight:300; font-size:22px; line-height:40px; margin:0;}
+
+
+.design-content-sec{float:left; width:100%;}
+.design-content-sec .inner-about-sec {background: #f4f6f7; padding-right:0;padding-top: 0; position:relative; padding-bottom:0;}
+.design-content-sec ul {padding: 0;margin: 0;}
+.design-content-sec ul li{display:inline-block; vertical-align:middle; width:49%;}
+.design-content-sec ul li p{font-family: 'Roboto', sans-serif; font-weight:300; font-size:26px; line-height:44px; margin:0;}
+.design-content-sec ul li p a{color:#2982a6; font-weight:400;}
+.design-content-sec ul li p a:hover{text-decoration:none; color:#000;}
+.design-content-sec ul li.for-bg {width: 50.62%;background: url(../images/wireframes.png)no-repeat;padding: 27% 0;background-position: 0 center;
+	background-size: cover;}
+
+
+.multiple-project-sec {float: left;	width: 100%;}
+.multiple-project-sec p{font-family: 'Roboto', sans-serif; font-weight:300;font-size:20px; line-height:40px; }
+.multiple-project-sec p:nth-child(2) {margin: 0;}
+.multiple-project-sec .inner-about-sec {padding: 50px 70px;}
+
+
+.grooving-sec{float:left; width:100%;}
+.grooving-sec .inner-about-sec {background: #f4f6f7;padding-top: 0;padding-left: 0; padding-bottom:0;}
+.grooving-sec ul{padding: 0;margin: 0;}
+.grooving-sec ul li{display:inline-block; vertical-align:middle; width:49%;}
+.grooving-sec .inner-about-sec li.for-img{width: 50.62%;background: url(../images/tv-img.png)no-repeat;padding:15% 0;background-position:center;
+margin: 60px 0 0;}
+.grooving-sec ul li p {font-family: 'Roboto', sans-serif; font-weight:300;font-size:20px; line-height:40px;	text-align: right;margin: 20px 0 0;}
+.grooving-sec ul li p a{color:#2982a6; font-weight:400;}
+.grooving-sec ul li p a:hover{text-decoration:none; color:#000;}
+
+.dc-metro-sec{float:left; width:100%;}
+.dc-metro-sec h2 {background: #1a1e23;color: #fff;padding:40px 20px;text-align: center;font-size: 26px;font-weight: 300;line-height: 40px;margin: 0;}
+.dc-metro-sec h2 a{color:#2982a6; font-weight:400;}
+.dc-metro-sec h2 a:hover{text-decoration:none; color:#fff;}
+.dc-metro-sec img {width: 100%;}
+
+.copyright-sec {float: left;	width: 100%;text-align: center; padding:40px 10px;}
+.copyright-sec p{font-family: 'Roboto', sans-serif; font-weight:300; text-transform:uppercase; font-size:14px; margin:0;}
+
+
+
+/*------------------------ About Page CSS End Here ------------------------*/
+
+
+/*------------------------ Contact Us CSS Start Here ------------------------*/
+
+.get-contact {float: none;width: 100%;max-width: 1810px;display:block;background: #e9edef;position: absolute;left: 0;right: 0;margin: 0 auto;
+	z-index: 9;	top: 0px; height:100%; padding:40px;}
+.home-header.contact-body {margin: 0 0 30px;}
+.get-contact .inner-contact {padding:0px; float: left; width: 100%; height:100%; background:#2982a6}
+.for-close-btn{float:right;  text-align:right; margin: 20px 20px 45px;}
+.get-contact .inner-contact a.contact-close {display: inline-block;}
+.get-contact .inner-contact .contact-us {float: left; width: 100%;}
+.get-contact .inner-contact .contact-us div.float-left {padding-left: 90px;}
+.get-contact .inner-contact .contact-us h2 {color: #fff;font-size: 32px;margin: 0 0 60px;font-weight: 700;}
+.get-contact .inner-contact .contact-us form {float: left;width: 100%;margin: 0;}
+.get-contact .inner-contact .contact-us form input,
+.get-contact .inner-contact .contact-us form textarea{float: left;width: 100%;font-weight: 300;color: #fff;background: transparent;border-left: none;
+border-top: none;border-right: none;border-bottom: 1px solid #fff;padding: 0 0 15px;margin: 0 0 25px;font-size: 18px;}
+.get-contact .inner-contact .contact-us form textarea {height: 110px;}
+
+.get-contact .inner-contact .contact-us form input::-webkit-input-placeholder {color:#fff; opacity:1;}
+.get-contact .inner-contact .contact-us form input::-moz-placeholder {color:#fff; opacity:1;}
+.get-contact .inner-contact .contact-us form input:-ms-input-placeholder {color:#fff; opacity:1;}
+.get-contact .inner-contact .contact-us form input:-moz-placeholder {color:#fff; opacity:1;}
+
+.get-contact .inner-contact .contact-us form textarea::-webkit-input-placeholder {color:#fff; opacity:1;}
+.get-contact .inner-contact .contact-us form textarea::-moz-placeholder {color:#fff; opacity:1;}
+.get-contact .inner-contact .contact-us form textarea:-ms-input-placeholder {color:#fff; opacity:1;}
+.get-contact .inner-contact .contact-us form textarea:-moz-placeholder {color:#fff; opacity:1;}
+.get-contact .inner-contact .contact-us form button {float: right;background: #fff;color: #272b2d;text-transform: uppercase;font-size: 14px;
+	font-weight: 300;line-height: 20px;padding: 8px 20px;border-radius: 40px;border: 2px solid #fff; cursor: pointer;margin: 30px 0 0;}
+.get-contact .inner-contact .contact-us form button:hover{background: transparent; color:#fff; }
+
+.get-contact .inner-contact .contact-us p {font-weight: 300;color: #fff;font-size: 20px;line-height: 36px;}
+.get-contact .inner-contact .contact-us p a{color:#9fdff8; border-bottom: 2px solid #9fdff8;}
+.get-contact .inner-contact .contact-us p a:hover{color:#fff; border-bottom: 2px solid #fff; text-decoration:none;}
+
+/*------------------------ Contact Us CSS End Here ------------------------*/
+
+
+/*------------------------ Project 01 CSS Start Here ------------------------*/
+
+.project-1{background:url(../images/project-bg-1.jpg)no-repeat;background-size:100% 100%; background-position:center;position: relative;}
+.home-bottom-sec.project-bottom ul li.drop-icon a {background: transparent; width: auto; height: auto;}
+.home-bottom-sec.project-bottom ul li.drop-icon a:before{display:none;}
+.home-bottom-sec.project-bottom ul li.drop-icon a img {padding: 0;}
+.home-header.project-header .button-sec a.get-touch {background: #272b2d;}
+.home-header.project-header .button-sec a.get-touch:hover{background:#000;}
+
+.project-middle-sec {float: left;width: 100%;padding: 70px 0 0;}
+.project-middle-sec ul {padding: 0;margin: 0;}
+.project-middle-sec ul li {display: inline-block;width: 33%;vertical-align: top;text-align: left;}
+.project-middle-sec ul li.bank {width: 10%;vertical-align: top;padding-top: 5%;}
+.project-middle-sec ul li:last-child {width: 43%;text-align: right; vertical-align: top;}
+.project-middle-sec ul li:last-child img {margin: 60px 0 0;}
+.project-middle-sec ul li:nth-child(2) {vertical-align: top;}
+.project-middle-sec ul li.bank p {margin: 0;color: #fff;writing-mode: vertical-lr;transform: rotate(180deg);padding: 15px 0 0; float:left;
+-webkit-writing-mode: vertical-lr; -ms-writing-mode:vertical-lr; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); text-align:center;}
+.project-middle-sec ul li.bank span.for-border{position: relative; display:inline-block;}
+.project-middle-sec ul li.bank span.for-border:before{position:absolute; content:""; width:1px; height:20px; background:#fff; left:13px;bottom: -150px;}
+
+.project-middle-sec ul li h2 {margin: 0 0 40px;color: #c1eff7;text-transform: uppercase;font-size: 52px;line-height: 56px;font-weight: 400;}
+.project-middle-sec ul li h2 span {text-transform: initial;}
+.project-middle-sec ul li h2 span.world-bank {font-weight: 700;color: #085571;}
+.project-middle-sec ul li a.view-case {display: inline-block;	color: #fff;background: #b11c32;line-height: 20px;text-transform: uppercase;
+	font-weight: 300;font-size: 14px;padding: 8px 30px;border-radius: 40px; border:2px solid #b11c32;}
+.project-middle-sec ul li a.view-case:hover{text-decoration:none; background:transparent; color:#b11c32;}
+
+.home-bottom-sec.project-bottom {margin: 120px 0 0; position:initial;padding-bottom: 40px;}	
+.home-bottom-sec.project-bottom ul li:last-child {text-align: right;}
+.home-bottom-sec.project-bottom ul li:last-child p {color: #fff;font-family: 'Times New Roman';font-weight: bold;font-size: 16px;max-width: 50px;
+	text-align: center;line-height: 18px;float: right;width: 100%;}
+.home-bottom-sec.project-bottom ul li:last-child p span.divider{position: relative;}
+.home-bottom-sec.project-bottom ul li:last-child p span {display: block;text-align: right;padding: 0 13px 0 0;font-size: 24px;margin: -6px 0 0; 
+ color:#7d97af;}
+.home-bottom-sec.project-bottom ul li:last-child p span.total-project {font-size: 16px;color: #fff;padding: 0 0 0 40px;margin: -12px 0 0 0;}
+.home-bottom-sec.project-bottom ul li:last-child p span.divider:before,
+.home-bottom-sec.project-bottom ul li:last-child p span.divider:after{position:absolute; content:""; background:#839bb3;} 
+.home-bottom-sec.project-bottom ul li:last-child p span.divider:before{top:-120px; width:2px; height:100px; left:26px; right:0; margin:0 auto;}
+.home-bottom-sec.project-bottom ul li:last-child p span.divider:after{bottom:-30; width:2px; height:10px; left:26px; right:0; margin:0 auto;}
+
+/*------------------------ Project 01 CSS End Here ------------------------*/
+
+
+/*------------------------ Project 02 CSS Start Here ------------------------*/
+
+.project-2{background:url(../images/project-bg-2.jpg)no-repeat;background-size:100% 100%; background-position:center;position: relative;}
+.project-2 .project-middle-sec ul li h2 {color: #defffe;margin: 0;}
+.project-2 .project-middle-sec ul li h2 span.world-bank {text-transform: uppercase;color: #015a65;}
+.project-2 .project-middle-sec ul li:nth-child(2) {	width: 38%;}
+.project-2 .project-middle-sec ul li:nth-child(2)  p{text-transform:uppercase; font-weight:400; color:#015a65; margin: 20px 0 50px; background:#e6f8f8; 
+float:left; width:100%; text-align:center;letter-spacing: 10px; padding: 4px 10px;}
+.project-2 .home-bottom-sec.project-bottom ul li:last-child p span {color: #85c7d0;}
+.project-2 .home-bottom-sec.project-bottom ul li:last-child p span.divider::before, 
+.project-2 .home-bottom-sec.project-bottom ul li:last-child p span.divider::after {background:#85c7d0;}
+.project-2 .home-bottom-sec.project-bottom ul li:last-child p span.total-project {color: #fff;}
+
+
+/*------------------------ Project 02 CSS End Here ------------------------*/
+
+
+/*------------------------ Project 03 CSS Start Here ------------------------*/
+
+.project-3{background:url(../images/project-bg-3.jpg)no-repeat;background-size:100% 100%; background-position:center;position: relative;}
+.project-3 .project-middle-sec ul li h2 span.world-bank {text-transform: uppercase;}
+.project-3 .project-middle-sec ul li h2 {color: #c1e9f7;}
+.project-3 .home-bottom-sec.project-bottom ul li:last-child p span.divider {color: #ccb1f5;padding: 0 10px 0 0;}
+.project-3 .home-bottom-sec.project-bottom ul li:last-child p span.divider::before,
+.project-3 .home-bottom-sec.project-bottom ul li:last-child p span.divider::after {background:#ccb1f5;}
+
+/*------------------------ Project 03 CSS End Here ------------------------*/
+
+
+/*------------------------ Projects CSS Start Here ------------------------*/
+
+body.home.work-project {position: relative;}
+body.home.work-project.for-pro:before{position: absolute;content: "";width: 70px;background: #e9edef;left: 0;top: 0;height: 100%;position: fixed;
+	box-shadow: 0 0 2px 2px #c8cccd; display:block;}
+body.home.work-project::before {position: absolute;content: "";width: 70px;background: #e9edef;left: 0;top: 0;height: 100%;position: fixed;
+	box-shadow: 0 0 2px 2px #c8cccd; display: none;}
+	
+body.home.work-project .inner-home-sec {padding: 0 0%;}
+body.home.work-project.for-pro .inner-home-sec {padding: 0 3%;}
+body.home.work-project.for-pro header.home-header .inner-home-sec {padding-left: 1.2%;}
+body.home.work-project.for-pro .project-middle-sec.for-others .inner-home-sec,
+body.home.work-project.for-pro .home-bottom-sec .inner-home-sec {padding-left: 1.2% !important;}
+body.home.work-project .home-header{position: relative;padding: 42px 0 0 0px;}
+body.home.work-project .home-bottom-sec{padding-bottom:20%;position: relative; padding-top:9%;}
+body.home.work-project .projects-bottom{padding-bottom: 0;position: absolute;padding-top: 0;bottom: 40px;}
+body.home.work-project .home-header .left-menu span.toggle-link span {width: 28px;height: 2px;background: #272b2d;display: block;	position: relative;}
+body.home.work-project .home-header .left-menu span.toggle-link span:before,
+body.home.work-project .home-header .left-menu span.toggle-link span:after{position:absolute; content:""; background: #272b2d;width: 28px;height: 2px; left:0; }	
+body.home.work-project .home-header .left-menu span.toggle-link span:before{top:-7px;}
+body.home.work-project .home-header .left-menu span.toggle-link span:after{bottom:-7px;}
+body.home.work-project .home-header .left-menu span.toggle-link span:hover{cursor:pointer;}
+
+.project-middle-sec.for-others ul li.bank p {color: #272b2d;text-transform: uppercase;font-size: 14px;font-weight: 300; 
+ font-family: 'Poppins', sans-serif; letter-spacing: 3px;}
+.project-middle-sec.for-others ul li.bank p span{font-family: 'Roboto', sans-serif;letter-spacing: -1px;margin: 0 0 0 3px; display: inline-block;}
+.project-middle-sec.for-others ul li h2 {text-transform: initial;color: #272b2d;font-size: 32px; font-family: 'Poppins', sans-serif; font-weight:300; 
+  line-height: 40px;}
+.project-middle-sec.for-others ul li h2 span.world-bank{font-family: 'Oswald', sans-serif; font-weight:400; font-size:76px; color:#2982a6;
+ margin: 28px 0 0; display: block;}  
+.project-middle-sec.for-others ul li ul.for-view {padding: 0;	margin: 0;}
+.project-middle-sec.for-others ul li ul.for-view li {vertical-align: middle; width:8%; position: relative;}
+.project-middle-sec.for-others ul li ul.for-view li h2 {margin: 0;font-size: 76px;font-family: 'Oswald', sans-serif; line-height: 70px;}
+.project-middle-sec.for-others ul li ul.for-view li a {background: #2982a6;color: #fff;text-transform: uppercase;font-weight: 300;font-size: 14px;padding: 7px 20px;
+	display: inline-block;border-radius: 40px; margin: 15px 0 0;}
+.project-middle-sec.for-others ul li ul.for-view li a:hover{background:#272b2d; text-decoration:none;}
+.project-middle-sec.for-others ul li ul.for-view li:first-child {width: 20%; position: relative; z-index: 1;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2) img{position:relative;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2) {width: 50%;position: relative;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2)::before {position: absolute;content: "";background: #b2bbef;width: 520px;height: 300px; left: -29%;
+  top: 20px;}
+.project-middle-sec.for-others ul li ul.for-view li:last-child a {background: none;color: #9b9fa0;font-weight:600;font-size: 14px;margin: 0 auto;padding: 25px 10px;
+	float: left;width: 100%;font-family: 'Poppins', sans-serif;border-bottom: 1px solid #adafae;border-radius: 0; text-align: center;}
+.project-middle-sec.for-others ul li ul.for-view li:last-child a:hover,
+.project-middle-sec.for-others ul li ul.for-view li:last-child a.selection{color:#272b2d;}
+.project-middle-sec.for-others ul li ul.for-view li:last-child {margin: 0 0 0 70px;}
+.project-middle-sec.for-others ul li ul.for-view li:last-child a:last-child {border-bottom: none;}
+.project-middle-sec.for-others ul li:nth-child(2){width: 45%;}
+.home-bottom-sec.projects-bottom ul li:last-child {text-align: right;}
+.home-bottom-sec.projects-bottom ul li:last-child a{background:#2982a6; display:inline-block; padding:17px; border-radius:50%;}
+.home-bottom-sec.projects-bottom ul li:last-child a:hover{background:#272b2d;}
+
+/*------------------------ Projects CSS End Here ------------------------*/
+
+
+/*------------------------Dapip Projects CSS Start Here ------------------------*/
+
+.project-middle-sec.for-others ul li:nth-child(2).for-null {width: 16%;}
+.project-middle-sec.for-others ul li.for-dapip-center {width: 73%;}
+.project-middle-sec.for-others ul li.for-dapip-center ul.for-view li:first-child {width: 15%;margin: 60px 0 0;}
+.project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2):before{background:#098f9f; left: -20%;}
+.project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2) p {position: relative;text-transform: uppercase;}
+.project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2) p.database {color: #fff;font-family: 'Poppins', sans-serif; font-weight:300; 
+margin: 20px 0 0;}
+.project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2) p.department {background: #fff;max-width: 367px;font-family: 'Poppins', sans-serif;
+	width: 100%;text-align: center;margin: 15px 0 0;color: #098f9f;font-size: 13px;letter-spacing: 3px; font-weight:500;line-height: 18px;
+padding: 4px 20px;}
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul li:nth-child(2):before{background:#1d97db;}
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs p.database.bluecross {font-size: 30px;}
+
+/*------------------------Dapip Projects CSS End Here ------------------------*/
+
+
+/*------------------------Bumper Projects CSS Start Here ------------------------*/
+
+.project-middle-sec.for-others ul li ul.for-view li:first-child.for-bumper {width: 32%;margin: 110px 0 0;}
+
+/*------------------------Bumper Projects CSS Endt Here ------------------------*/
+
+
+/*------------------------Case Study CSS Start Here ------------------------*/
+
+body.home.work-project.innrt-case{position:relative;}
+body.home.work-project.innrt-case:before{height: 800px; position: absolute;}
+.case-left-bar {float: left;width: 70px;position: absolute; z-index: 1; display: none;}
+.case-left-bar ul {padding:30px 20px 0;margin: 0; float: left;width: 100%;}
+.case-left-bar ul li{float: left;width: 100%; list-style:none;}
+.case-left-bar ul li span.toggle-link span{width: 28px;height: 2px;background: #272b2d;display: block; position: relative;}
+.case-left-bar ul li span.toggle-link span::before, 
+.case-left-bar ul li span.toggle-link span::after {position: absolute;content: "";background: #272b2d;width: 28px;height: 2px;left: 0;}
+.case-left-bar ul li span.toggle-link span:before{top: -7px;}
+.case-left-bar ul li span.toggle-link span::after{bottom: -7px;}
+.case-left-bar ul li p{margin:0;color: #272b2d;text-transform: uppercase;font-size: 14px;font-weight: 300;font-family: 'Poppins', sans-serif;float: left;
+letter-spacing: 3px;writing-mode: vertical-lr; transform: rotate(180deg); -webkit-writing-mode: vertical-lr; -ms-writing-mode: vertical-lr;
+-webkit-transform: rotate(180deg); -ms-transform: rotate(180deg);}
+.case-left-bar ul li p span {letter-spacing: -5px;}
+.case-left-bar ul li:nth-child(2) {margin:170px 0 150px;}
+.case-left-bar ul li:last-child{margin: 0 0 0 -7px;}
+
+.case-banner-sec {float: left;width: 100%;}
+.case-banner-sec .case-bg-sec{background: #8a83cc; text-align: center; padding: 90px 0 90px;float: left; width: 100%;margin: 50px 0 0;}
+.case-banner-sec h1 {margin: 40px 0 0;font-size: 24px;color: #272b2d;font-weight: 300;font-family: 'Roboto', sans-serif;}
+.case-banner-sec h1 span{font-family: 'Roboto', sans-serif; font-size:32px; color:#2982a6; font-weight:700;float: left;width: 100%;margin: 13px 0 0;}
+.challenge-sec {float: left;	width: 100%;}
+.challenge-sec h3 {font-size: 32px;color: #272b2d;font-weight: 700;font-family: 'Roboto', sans-serif; margin: 0 0 18px;}
+.challenge-sec p{font-family: 'Roboto', sans-serif;  font-size:22px; line-height:40px;color: #272b2d; font-weight:300; }
+.challenge-sec p:nth-child(n+2) {margin: 0 0 30px;}
+
+.my-role-sec {float: left;	width: 100%;}
+.my-role-sec  .inner-about-sec{background:#f4f6f7; padding-top: 0;}
+.my-role-sec ul {padding: 0;	margin: 0;}
+.my-role-sec ul li {display: inline-block;vertical-align: middle;}
+.my-role-sec ul li:first-child{width:50%;}
+.my-role-sec ul li:last-child {width:49%;background: url(../images/my-role-img.png)no-repeat;height: 585px;background-position: 100% 0;}
+h3.case-heading {font-size: 32px;color: #272b2d;font-weight: 700;margin: 0 0 18px;font-family: 'Roboto', sans-serif; }
+p.case-para{font-family: 'Roboto', sans-serif;  font-weight: 300; line-height:40px;color: #272b2d; font-size:22px;	}
+
+
+.solution-sec,
+.design-sec,
+.outcome-sec, .whiteboard-sec, .dashboard-sec {float: left;width: 100%;}
+.solution-sec .inner-about-sec {float: left;	width: 100%;}
+.solution-sec ul {padding: 0;margin: 0;}
+.solution-sec ul li{list-style:none; float: left;width: 100%;font-family: 'Poppins', sans-serif;font-weight: 300; line-height:36px;color: #272b2d; 
+ font-size:20px;position: relative; padding: 0 0 0 30px;margin: 0 0 40px;}
+.solution-sec ul li:before{position:absolute; content:""; left:0; top:15px; width:7px; height:7px; background:#272b2d;}
+
+.design-sec .inner-about-sec {padding: 30px 0 0;text-align: center;background: #f4f6f7;}
+
+footer {float: left;width: 100%;margin: 70px 0 0;}
+footer .footer-left {width: 59%;background: #2881a5; display:inline-block; vertical-align:top;padding: 70px 0;}
+footer .footer-right {width: 40.7%;display:inline-block; vertical-align:bottom; background:#272b2d; position:relative;}
+footer .footer-right:before{position:absolute; content:""; background:#272b2d; width:4px; height:100%; left:-4px; top:0;}
+footer .footer-right:after{position:absolute; content:""; background:#272b2d; width:15px; height:100%; right:-15px; top:0; overflow:hidden; 
+display:none;}
+
+footer .footer-left .upcoming-project {float: right;max-width: 730px;width: 100%;}
+footer .footer-left .upcoming-project p {color: #fff;font-size: 14px;text-transform: uppercase;	margin: 0; font-weight:300;font-family: 'Poppins', sans-serif;}
+footer .footer-left .project-describe {float: left;width: 100%;margin: 15px 0;}
+footer .footer-left .project-describe h2 {float: left;color: #fff;font-size: 42px;font-family: 'Oswald', sans-serif; font-weight:400;}
+footer .footer-left .project-describe h2 span{font-weight:300;}
+footer .footer-left .project-describe p {font-size: 20px;line-height: 24px;text-transform: initial;	margin: 3px 0 0 20px;float: left;}
+footer .footer-left .upcoming-project a {font-family: 'Poppins', sans-serif;color: #272b2d;text-transform: uppercase;font-size: 14px;display: inline-block;
+	background: #ebeff1;padding: 7px 18px 6px;border-radius: 40px; font-weight:300;}
+footer .footer-left .upcoming-project a:hover{text-decoration:none; background:#272b2d; color:#fff;}
+footer .footer-right .footer-copyright {padding: 16% 2% 13% 7%;}
+footer .footer-right .footer-copyright p {float: left;	color: #fff;font-family: 'Poppins', sans-serif; font-weight:300; font-size:14px;
+ text-transform:uppercase; }
+footer .footer-right .footer-copyright a.top {float: right;margin-right: 20px;background: #2982a6;padding: 17px;border-radius: 50%;}
+footer .footer-right .footer-copyright a.top:hover{background: #166484;}
+
+.case-banner-sec .case-bg-sec.for-database {background: #098f9f;}
+.my-role-sec.database-role ul li {background: none;width: 100%;height: auto;}
+.my-role-sec.database-role .inner-about-sec {padding-top: 50px;}
+.whiteboard-sec {text-align: center;	padding: 0;}
+.dashboard-sec {text-align: center;}
+.dashboard-sec .inner-about-sec {background: #f4f6f7;}
+.design-sec.dapip-design .inner-about-sec {padding: 70px 20px;}
+.case-banner-sec .case-bg-sec.case-bumper {background:#f6d860;}
+.my-role-sec.bumper-role .inner-about-sec {padding-top: 60px;}
+.my-role-sec.bumper-role ul li{list-style: none;float: left;width: 100%; font-family: 'Poppins', sans-serif;font-weight: 300;line-height: 36px;
+color: #272b2d;font-size: 20px;position: relative;padding: 0 0 0 30px; margin: 0 0 20px;background: none; height: auto;}
+.my-role-sec.bumper-role ul li:before{position: absolute;content: "";left: 0;top: 15px;width: 7px;height: 7px;background: #272b2d;}
+.my-role-sec.bumper-role img {margin: 0px auto 0;float: none;display: block;}
+.solution-sec.bumper-solution ul li {margin: 0 0 10px;}
+
+.case-banner-sec .case-bg-sec.bluecross-banner {padding: 0;	background: none;}
+.case-banner-sec .case-bg-sec.bluecross-banner img {width: 100%;}
+.design-sec.bluecross-design ul {padding: 0;	margin: 0;}
+.design-sec.bluecross-design ul li {display: inline-block;	margin: 50px 20px 60px;vertical-align: middle;}
+
+.case-left-bar ul li.case-toggle #myNav.overlay{background: rgba(25,57,88, 0.5);}
+.case-left-bar ul li.case-toggle #myNav.overlay  a.closebtn{left: 0px;color: #000;font-weight: normal;max-width: 300px;padding: 0 0 0 47px;
+background: #e9edef;top: 0;z-index: 1;}
+
+body.home.work-project.innrt-case .bottom-overlay ul li p {writing-mode: initial;transform: initial;}
+body.home.work-project.innrt-case .bottom-overlay{left:0;}
+body.home.work-project.innrt-case .bottom-overlay ul{padding:0;}
+body.home.work-project.innrt-case .bottom-overlay ul li{display:inline-block; width:auto;margin: 0 10px 0;}
+body.home.work-project.innrt-case .bottom-overlay ul li a {display: block;margin: -7px 0 0;padding: 0;border-bottom: none;}
+.case-left-bar ul li.case-toggle span.toggle-link {float: left;width: 100%;padding: 10px 0;}
+.solution-sec.bumper-solution img {
+	margin: 0 auto;
+	display: block;
+}
+
+
+
+
+
+/*------------------------Case Study CSS End Here ------------------------*/
+
+
+
+/*------------------------ Media CSS Start Here ------------------------*/
+
+@media(max-width:1894px){
+.project-middle-sec ul li.inform-bumper ul.for-view li.for-bumper h2 {font-size: 50px;}
+.project-middle-sec.for-others ul li:nth-child(2) {width:19%;}
+.project-middle-sec ul li.inform-bumper {width:70%;}
+.project-middle-sec ul li.inform-bumper ul.for-view li.for-bumper h2 {font-size: 50px;}
+.project-middle-sec.for-others ul li.work-select {width:27%;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li:first-child {width: 23%;}
+.project-middle-sec.for-others ul li.viu-inner {float: right;width: 57%;}
+.project-middle-sec.for-others ul li.work-select h2 span.world-bank {font-size: 40px;	margin: 5px 0 0;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li.viu-img::before {width: 450px;}
+
+
+
+
+}
+
+
+@media(max-width:1300px){
+	
+.project-middle-sec.for-others ul li:nth-child(2).for-null {display: none;}	
+.project-middle-sec.for-others ul li.for-dapip-center {width: 88%;}
+.get-contact {/*max-width: 95%;*/}	
+	
+}
+
+@media(max-width:1199px){
+.design-content-sec ul li.for-bg {width: 50.4%;}
+.grooving-sec .inner-about-sec li.for-img {width: 50.4%;}
+.project-middle-sec ul li h2 {font-size: 40px;line-height: 50px;}
+.project-middle-sec ul li:last-child {width: 56%;}
+.project-middle-sec.for-others ul li:nth-child(2) {width: 30%;}
+.project-middle-sec.for-others ul li h2 span.world-bank {font-size: 54px;margin: 18px 0 0;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2)::before {width: 390px;height: 240px;}
+.project-middle-sec ul li:last-child {width:46%;}
+.project-middle-sec.for-others ul li ul.for-view li:first-child {width: 25%;}
+.project-middle-sec.for-others ul li.for-dapip-center ul.for-view li:first-child {width: 17%;margin: 10px 0 0;}
+.project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2):before{width: 510px;height: 310px;}
+.project-middle-sec.for-others ul li:nth-child(2).for-bumper-null {display: none;}
+.project-middle-sec.for-others ul li.inform-bumper {width: 88% !important;}
+
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul.for-view li:first-child {width: 21%;margin: 110px 0 0;}
+.case-banner-sec, .challenge-sec, .my-role-sec,
+.solution-sec, .design-sec, .outcome-sec, .whiteboard-sec, .dashboard-sec {padding-left:0%;}
+footer .footer-left {width: 58.5%;} 
+footer .footer-left .upcoming-project {max-width: 100%;padding: 0px 30px;}
+footer .footer-left .project-describe h2 {font-size: 32px;}
+footer .footer-left .project-describe p {font-size: 18px;}
+body.home.work-project .home-bottom-sec {padding-top: 14%;}
+.project-middle-sec.for-others ul li ul.for-view li:first-child.for-bumper {width: 23%;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2).car-project::before {left: -20%;	width: 500px;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li:first-child {width: 26%;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li.viu-img::before {width: 400px;}
+
+
+
+}
+
+@media(max-width:991px){
+
+.home-header .left-menu .overlay-content {padding: 20% 2.5%;}
+.banner-sec .caption .heading-caption h2 {font-size: 35px;}
+.banner-sec .caption .banner-desc p {font-size: 18px;}
+.design-content-sec ul li p {font-size: 18px;line-height: 38px;margin: 40px 0 40px;}
+.design-content-sec ul li {width: 100%;}
+.design-content-sec ul li.for-bg {width: 100%;	padding: 50% 0;}
+.design-content-sec ul li:first-child {padding-right: 70px;}
+.grooving-sec .inner-about-sec li.for-img {width: 100%;padding: 27% 0;}
+.grooving-sec ul li {width: 100%;}
+.grooving-sec ul li {padding-left: 70px;}
+.grooving-sec ul li p {text-align: left;margin: 20px 0 60px;}
+.get-contact .inner-contact .contact-us div.float-left {padding-left:15px;}
+.project-middle-sec ul li h2 {font-size: 30px;	line-height: 40px;}
+.project-middle-sec ul li:last-child {width:46%;}
+.project-middle-sec ul li:last-child img {margin: 20px 0 0;max-width: 300px;}
+.project-middle-sec.for-others ul li:nth-child(2) {width: 88%;}
+.project-middle-sec.for-others ul li:last-child {width:88%;	padding-left:0px; margin: 40px 0 20px;}
+.project-middle-sec.for-others ul li ul.for-view li:last-child {margin: 0;width: 10%; float:right;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2)::before {width: 490px;height: 245px;top: -12px;left: -39%;}
+.project-middle-sec.for-others ul li ul.for-view li:first-child.for-bumper h2 {font-size: 50px;}
+.project-middle-sec.for-others ul li.for-dapip-center ul.for-view li:first-child {width: 26%; float:left;margin: 70px 0 0;}
+.project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2):before{width: 560px;height: 300px;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2).inner-dapip-proj:before{width: 510px; left: -36%;}
+.project-middle-sec.for-others ul li ul.for-view li a {margin: 4px 0 0;}
+.project-middle-sec.for-others ul li ul.for-view li h2 {font-size: 55px;}
+
+
+.project-middle-sec.for-others ul li ul.for-view li:first-child.for-bumper h2 {font-size: 50px;}
+.project-middle-sec.for-others ul li.inform-bumper ul.for-view li:nth-child(2)::before{width: 450px;}
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul.for-view li:first-child {width: 28%; float:left;}
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul.for-view li:first-child h2{font-size:60px;}
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul.for-view li:nth-child(2)::before {width:520px;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2) {float: left;}
+
+.case-banner-sec, .challenge-sec, .my-role-sec, .solution-sec, .design-sec, .outcome-sec ,
+.whiteboard-sec, .dashboard-sec{padding-left: 0%;}
+.case-banner-sec .case-bg-sec {padding: 40px 40px 40px;}
+.my-role-sec ul li:first-child {width: 100%;}
+.my-role-sec h3.case-heading {margin-top: 40px;}
+.my-role-sec ul li:last-child {width: 100%;}
+.design-sec .inner-about-sec {padding: 30px 20px 0;}
+footer .footer-left {width: 100%;padding: 40px 0;}
+footer .footer-right {width: 100%;}
+footer .footer-right .footer-copyright {padding: 6% 2% 7% 5%;}
+footer .footer-right::before {display:none;}
+.project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2) p.database br {display: none;}
+.project-middle-sec.for-others ul li ul.for-view li:first-child.for-bumper {width: 32%;	margin: 60px 0 0;	float: left;}
+
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li:first-child {float: left;	margin: 50px 0 0;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li.viu-img::before {width: 490px;}
+body.home.work-project .projects-bottom {position:relative;}
+.home-bottom-sec ul li:first-child a img {margin: 15px 0 0;}
+
+
+
+}
+
+@media(max-width:767px){	
+.home-middle-sec p.heading {font-size: 24px;}
+.home-middle-sec h1 {font-size: 55px;}
+.home-middle-sec p.sub-heading {font-size: 20px;}
+.banner-sec .caption {padding: 0 40px;}	
+.banner-sec .caption .heading-caption {margin: 20px 0 0;}
+.banner-sec .caption .banner-desc {bottom: 15px;}
+.banner-sec .caption .banner-desc p {font-size: 16px;}
+.inner-about-sec {padding:40px  30px;}
+.about-me p {font-size: 18px;line-height: 35px;}
+.multiple-project-sec .inner-about-sec {padding: 40px 30px;}
+.grooving-sec ul li {padding-left: 20px;}
+.design-content-sec ul li:first-child {padding-right: 20px;}
+.dc-metro-sec h2 {font-size: 22px;line-height: 34px;}
+.get-contact .inner-contact .contact-us div.float-right {margin: 60px 0 0;}
+.get-contact .inner-contact .contact-us h2 {margin: 0 0 30px;}
+.get-contact .inner-contact .contact-us div.float-left h2 {margin: 0 0 50px;}
+.get-contact .inner-contact .contact-us form button {float: left;}
+.project-middle-sec ul li {width: 49%;}
+.project-middle-sec ul li:last-child {width: 38%;}
+.project-middle-sec ul li:last-child img {max-width: 230px;}
+
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2)::before {width: 380px;height: 205px;}
+.project-middle-sec.for-others ul li.for-dapip-center ul.for-view li:first-child {width: 100%;margin: 0 0 50px;padding: 0 0 0 0px;}
+.project-middle-sec.for-others ul li.for-dapip-center{width: 88%; padding-left:0px; margin:0;}
+
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2) {width: 100%;padding-left:0px;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2).inner-dapip-proj::before {left: 0;width: 410px;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2).inner-dapip-proj img {margin: 20px 0 0 30px !important;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2).inner-dapip-proj p.database br {display: block;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2).inner-dapip-proj p.database {margin: 20px 0 0 20px;}
+.project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2) p.department {margin: 15px 0 0 20px;}
+.project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2):before{width: 430px;	height: 290px;left: 0;	top: -10px;}
+.project-middle-sec.for-others ul li.for-dapip-center ul.for-view li:last-child{margin:90px 0 0;width: 15%;float: left;}
+.project-middle-sec.for-others ul li ul.for-view li:first-child.for-bumper {width: 100%;margin: 0 0 70px;}
+.project-middle-sec.for-others ul li.inform-bumper ul.for-view li:nth-child(2)::before {left: 0;top: 0;}
+.project-middle-sec.for-others ul li.inform-bumper ul.for-view li:nth-child(2) img{margin:50px 0 0;}
+.project-middle-sec.for-others ul li.inform-bumper ul.for-view li:last-child {float: left;	margin: 60px 0 0;}
+
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul.for-view li:first-child {width: 100%;margin: 0 0 50px; padding-left:0;}
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul.for-view li:nth-child(2)::before {width: 400px;height: 240px;left: 0;}
+.get-contact .inner-contact {padding: 40px;}
+.project-middle-sec.for-others ul li ul.for-view {padding: 0 0 0 40px;}
+.project-middle-sec.for-others ul li.inform-bumper ul.for-view li:nth-child(2).car-project::before {width: 230px;height: 180px;}
+.project-middle-sec.for-others ul li.inform-bumper ul.for-view li:nth-child(2).car-project img {max-width: 190px;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view {padding: 0;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li.viu-img {width: 50%;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li.viu-img::before {width: 380px;}
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs p.database.bluecross {font-size: 22px;	margin-left: 10px;}
+.get-contact {height:auto}	
+
+	
+}
+
+@media(max-width:624px){
+
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li:first-child {width: 100%;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li.viu-img {width: 100%;margin: 50px 0 0;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li:last-child {float: left;	margin: 50px 0 0; padding:0;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li.viu-img::before {width: 270px;	left: 0;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li.viu-img img {margin-left: 20px;}
+.project-middle-sec.for-others ul li.work-select {padding-left: 40px !important;}
+.project-middle-sec.for-others ul li.viu-inner {padding-left: 40px !important;margin: 0;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li {padding: 0;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li:first-child {padding: 0;margin: 0;}
+
+
+}
+
+@media(max-width:600px){
+	
+.project-middle-sec.for-others ul li ul.for-view li:first-child {width: 100%;padding: 0 0 0 60px;}
+.project-middle-sec.for-others ul li:nth-child(2) {padding-left: 20px;}	
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2) {width: 100%;position: relative;padding-left: 60px;margin: 60px 0 30px;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2)::before {width: 290px;height: 185px;top: 0;left: 33px;}
+.project-middle-sec.for-others ul li ul.for-view li:last-child {margin: 0;width: 24%;padding: 0 0 0 60px;	float: left;}
+.project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2):before{width: 420px;height: 275px;}
+.project-middle-sec.for-others ul li.for-dapip-center ul.for-view li:last-child {width: 24%; padding:0;}
+.project-middle-sec.for-others ul li ul.for-view li:first-child.for-bumper {padding: 0;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2){margin:0; padding:0;}
+.project-middle-sec.for-others ul li.inform-bumper ul.for-view li:nth-child(2) img {margin: 40px 0 0;}
+.project-middle-sec.for-others ul li.inform-bumper ul.for-view li:last-child {padding: 0;}
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul.for-view li:nth-child(2) img {margin: 30px 0 0 30px;}
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul.for-view li:nth-child(2)::before {left:0px;width: 330px;}
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs p.database.bluecross {font-size: 20px;padding: 0 0 0 30px;	margin-left: 0;}
+.case-banner-sec h1 span {font-size: 30px;margin: 5px 0 0;}
+.case-banner-sec, .challenge-sec, .my-role-sec, .solution-sec, .design-sec, .outcome-sec,
+.whiteboard-sec, .dashboard-sec {padding-left: 0%;}
+.challenge-sec h3 {font-size: 24px;}
+.challenge-sec p {font-size: 16px;line-height: 30px;}
+h3.case-heading {font-size: 24px;}
+p.case-para {line-height: 30px;	font-size: 16px;}
+.solution-sec ul li {line-height: 30px;font-size: 16px;margin: 0 0 20px;}
+.my-role-sec.bumper-role ul li {font-size: 16px; line-height: 30px;}
+.home-header .left-menu span.toggle-link {margin: 0 0 0 0px;}
+.project-middle-sec.for-others ul li.bank p {margin: 0 0 0 17px;}
+.home-bottom-sec ul li:first-child a img {margin-left: 6px;}
+
+	
+}
+
+
+
+@media(max-width:579px){
+.project-middle-sec ul li {width: 88%;}
+.project-middle-sec ul li:last-child {width:100%; text-align:left;	}
+.project-middle-sec ul li:last-child img {margin: 50px 0 0;}	
+.project-2 .project-middle-sec ul li:nth-child(2) {width: 88%;}
+.project-2 .project-middle-sec ul li:nth-child(2) p {letter-spacing: 4px;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2) img{margin:20px 0 0;}
+.project-middle-sec.for-others ul li:nth-child(2) {padding-left: 40px;}
+.project-middle-sec.for-others ul li:last-child {padding-left: 50px;}
+.project-middle-sec.for-others ul li:last-child {padding-left: 0;}
+.project-middle-sec.for-others ul li ul.for-view li:first-child.for-bumper {padding: 0 0 0 30px;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2) {padding: 0 0 0 0px;}
+.project-middle-sec.for-others ul li.inform-bumper ul.for-view li:nth-child(2)::before {left: 30px;}
+.project-middle-sec.for-others ul li.inform-bumper ul.for-view li:last-child {padding: 0 0 0 30px;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2).inner-dapip-proj img {max-width: 120px !important; }	
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2).inner-dapip-proj p.database {font-size: 14px;}
+.project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2) p.department {display: none;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2).inner-dapip-proj::before {width: 360px;height: 170px;}
+.project-middle-sec.for-others ul li.inform-bumper ul.for-view li:nth-child(2) img {margin: 50px 0 0 30px;}
+	
+	
+}
+
+@media(max-width:479px){
+	
+.home-header .left-menu .overlay-content {padding: 30% 2.5%;}
+.banner-sec .caption .banner-desc p {font-size: 12px;}	
+.banner-sec .caption .heading-caption h2 {font-size: 26px;}
+.grooving-sec .inner-about-sec li.for-img {padding: 37% 0;}
+.project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2):before {width: 360px;height: 295px;}
+.project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2) p.department {max-width: 307px;	font-size: 11px;}
+.project-middle-sec.for-others ul li.for-dapip-center ul.for-view li:nth-child(2) img {max-width: 150px;	margin: 40px 0 0;}
+.case-banner-sec, .challenge-sec, .my-role-sec, .solution-sec, .design-sec, .outcome-sec,
+.whiteboard-sec, .dashboard-sec {padding-left: 0%;}
+.my-role-sec ul li:last-child {background-position: center;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2).inner-dapip-proj p.database {max-width: 200px;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2).inner-dapip-proj::before {width: 240px;height: 190px;}
+
+
+
+}
+
+
+
+
+
+@media(max-width:400px){
+.banner-sec .caption .banner-desc{display:none;}	
+.banner-sec .caption .heading-caption {margin: 0;position: absolute;top: 50%;	transform: translateY(-50%); -webkit-transform: translateY(-50%);}
+.banner-sec .caption .heading-caption h2 {font-size: 20px;margin: 0;	}
+.grooving-sec .inner-about-sec li.for-img { padding: 56%;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2)::before {display: block;}
+.project-middle-sec.for-others ul li h2 span.world-bank {font-size: 44px;margin: 8px 0 0;}
+.project-middle-sec.for-others ul li h2 {font-size: 26px;line-height: 30px;}
+.project-middle-sec.for-others ul li:last-child {padding-left:0px;margin: 0 0 0;}
+.project-middle-sec.for-others ul li ul.for-view li:last-child {width: 50%;}
+
+/*.project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2):before{display:none;}*/
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul.for-view li:nth-child(2)::before {width:230px;height: 220px;}
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul.for-view li:nth-child(2) img {margin: 30px 0 0 20px;}
+.project-middle-sec.for-others ul li.for-dapip-center.for-bcbs p.database.bluecross {font-size:16px;padding:20px 0 0 20px;}
+.project-middle-sec.for-others ul li ul.for-view li:nth-child(2) {padding-left:0px;	margin: 0 0 0;}
+.project-middle-sec.for-others ul li.for-dapip-center ul.for-view li:last-child {width:30%;	padding-left: 0px;}
+.project-middle-sec.for-others ul li ul.for-view li:first-child.for-bumper h2 {font-size: 45px;}
+.case-banner-sec, .challenge-sec, .my-role-sec, .solution-sec, .design-sec, .outcome-sec,
+.whiteboard-sec, .dashboard-sec {padding-left:0%;	}	
+.my-role-sec ul li:last-child {display: none;}
+.my-role-sec.database-role ul li {display: block;}
+footer .footer-left .project-describe p {width: 100%;	margin-left: 0;}
+.get-contact .inner-contact {padding: 40px 15px;}
+
+.project-middle-sec.for-others ul li.inform-bumper ul.for-view li:nth-child(2).car-project::before {width: 200px;	height: 160px;}
+.project-middle-sec.for-others ul li.inform-bumper ul.for-view li:nth-child(2) img {margin: 40px 0 0 20px;}
+.project-middle-sec.for-others ul li.inform-bumper ul.for-view li.for-bumper h2 {font-size: 34px;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li.viu-img::before {width: 220px;}
+.project-middle-sec.for-others ul li.viu-inner ul.for-view li.viu-img img {margin-left: 20px;	max-width: 180px;	margin-top: 40px;}
+
+
+
+
+}
+
+
+
+
+
+
+/*------------------------ Media CSS End Here ------------------------*/
+
+
+
+
+
+
+

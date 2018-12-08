@@ -1,0 +1,186 @@
+
+<html>
+<head>
+<title>Munish Verma | UI/UX Designer</title>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+jQuery(document).ready(function($){
+   $(".toggle-link").click(function(){
+        $(".overlay-content").addClass('close-pos');
+});
+$(".closebtn").click(function(){
+        $(".overlay-content").removeClass('close-pos');
+});
+
+//Toggle form
+//jQuery('.get-contact').hide();
+jQuery('.get-touch').click(function(){
+	jQuery('.get-contact').slideToggle();
+});
+
+jQuery('.contact-close').click(function(){
+	jQuery('.get-contact').hide();
+});
+
+});
+
+  </script>
+  
+</head>
+<body class="home">
+
+<!----------------------------------Header Start Here--------------------------->
+
+<header class="home-header">
+<div class="inner-home-sec">
+
+<div class="left-menu">
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onClick="closeNav()"><img src="images/icon-close.png" alt="close"></a>
+  <div class="overlay-content">
+  <div class="inner-sec-overlay">
+  
+      <a href="home.html"><span>Home</span>
+	   <span class="sub-link">Intro</span>
+	  </a>
+	
+     <a href="project-1.html"><span>Selected</span>
+	    <span class="sub-link">Projects</span>
+	  </a>
+	
+	    <a href="about.html"><span>Find Out</span>
+	     <span class="sub-link">About Me</span>
+	    </a>
+
+	
+		<div class="bottom-overlay">
+			<ul>
+				<li><a class="menu-linked" href="#"><img src="images/linked-in.png"></a></li>
+					<li><p>© 2018 Munish Verma</p></li>
+			</ul>
+		</div>	
+
+
+  </div>
+  </div>
+  
+  
+</div>
+
+<span class="toggle-link" style="cursor:pointer" onClick="openNav()"><img src="images/toglle-icon.png"> <span>MENU</span></span>
+</div>
+
+
+<div class="button-sec">
+<a class="get-touch" href="#">Get In Touch</a>
+</div>
+
+
+</div>
+</header>
+
+<!----------------------------------Header End Here--------------------------->
+
+
+<!----------------------------------Contact Start Here--------------------------->
+
+<div class="get-contact" style="display:none">
+<div class="inner-contact">
+<div class="for-close-btn"><a class="contact-close" href="#"><img src="images/contact-close-icon.png" class="img-responsive" /></a>
+</div>
+<div class="contact-us">
+
+<div class="col-md-6 col-xs-12 float-left">
+<h2>Lets Get In Touch</h2>
+
+<form>
+<input type="text" placeholder="*Name" >
+<input type="email" placeholder="*E-mail" >
+<input type="phone" placeholder="*Phone" >
+<textarea type="text" placeholder="*Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+</div>
+
+
+<div class="col-lg-4 col-md-5 col-xs-12 float-right">
+<h2>Or</h2>
+<p>Drop me a line at<br> <a href="mailto:verma.munish16@gmail.com">verma.munish16@gmail.com</a> and let’s 
+get things moving. New experiences and challenges are my thing.</p>
+</div>
+
+
+</div>
+</div>
+</div>
+
+<!----------------------------------Contact End Here--------------------------->
+
+
+<!----------------------------------Home middle Sec Start Here--------------------------->
+
+<div class="home-middle-sec">
+<div class="inner-home-sec">
+<p class="heading">Fresh Ideas of life</p>
+<h1>MUNISH VERMA</h1>
+<p class="sub-heading">User Interface & User Experience Designer</p>
+</div>
+</div>
+
+<!----------------------------------Home middle Sec End Here--------------------------->
+
+
+
+<!----------------------------------Home Bottom Sec Start Here--------------------------->
+
+
+<div class="home-bottom-sec">
+<div class="inner-home-sec">
+<ul>
+<li><a href="#"><img src="images/linked-in.png"></a></li>
+<li>&nbsp;</li>
+</ul>
+
+</div>
+</div>
+
+
+<!----------------------------------Home Bottom Sec End Here--------------------------->
+
+
+
+
+
+
+<!--<script src='https://threejs.org/build/three.min.js'></script>-->
+	<script src="js/three.min.js"></script>
+	<script src="js/Projector.js"></script>
+<!--<script src='https://threejs.org/examples/js/renderers/Projector.js'></script>-->
+<!--<script src='https://threejs.org/examples/js/renderers/CanvasRenderer.js'></script>-->
+	<script src="js/CanvasRenderer.js"></script>
+<!--<script src='https://threejs.org/examples/js/libs/stats.min.js'></script>-->
+	<script src="js/stats.min.js"></script>
+ <script  src="js/index.js"></script>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+  
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+  
+}
+</script>
+</body>
+</html>
+
+
