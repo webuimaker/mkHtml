@@ -22,10 +22,12 @@ $(".closebtn").click(function(){
 //jQuery('.get-contact').hide();
 jQuery('.get-touch').click(function(){
 	jQuery('.get-contact').slideToggle();
+	$("body").addClass('hide-scroll');
 });
 
 jQuery('.contact-close').click(function(){
 	jQuery('.get-contact').hide();
+	$("body").removeClass('hide-scroll');
 });
 
 });

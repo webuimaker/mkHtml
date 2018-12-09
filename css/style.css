@@ -31,7 +31,7 @@ a:hover, li:hover, button:hover{-webkit-transition: all 0.5s;
 transition: all 0.5s;}
 
 .sectionlr{padding:0px 40px}
-
+.hide-scroll{    overflow-y: hidden;}
 .overlay {
     height: 100%;
     width: 0;
@@ -251,7 +251,7 @@ margin: 60px 0 0;}
 .get-contact .inner-contact .contact-us form input,
 .get-contact .inner-contact .contact-us form textarea{float: left;width: 100%;font-weight: 300;color: #fff;background: transparent;border-left: none;
 border-top: none;border-right: none;border-bottom: 1px solid #fff;padding: 0 0 15px;margin: 0 0 25px;font-size: 18px;}
-.get-contact .inner-contact .contact-us form textarea {height: 110px;}
+.get-contact .inner-contact .contact-us form textarea {height: 110px; margin-bottom:0px;}
 
 .get-contact .inner-contact .contact-us form input::-webkit-input-placeholder {color:#fff; opacity:1;}
 .get-contact .inner-contact .contact-us form input::-moz-placeholder {color:#fff; opacity:1;}
@@ -263,7 +263,7 @@ border-top: none;border-right: none;border-bottom: 1px solid #fff;padding: 0 0 1
 .get-contact .inner-contact .contact-us form textarea:-ms-input-placeholder {color:#fff; opacity:1;}
 .get-contact .inner-contact .contact-us form textarea:-moz-placeholder {color:#fff; opacity:1;}
 .get-contact .inner-contact .contact-us form button {float: right;background: #fff;color: #272b2d;text-transform: uppercase;font-size: 14px;
-	font-weight: 300;line-height: 20px;padding: 8px 20px;border-radius: 40px;border: 2px solid #fff; cursor: pointer;margin: 30px 0 0;}
+	font-weight: 300;line-height: 20px;padding: 8px 20px;border-radius: 40px;border: 2px solid #fff; cursor: pointer;margin: 20px 0 0;}
 .get-contact .inner-contact .contact-us form button:hover{background: transparent; color:#fff; }
 
 .get-contact .inner-contact .contact-us p {font-weight: 300;color: #fff;font-size: 20px;line-height: 36px;}
@@ -616,6 +616,7 @@ body.home.work-project .home-bottom-sec {padding-top: 14%;}
 
 }
 
+
 @media(max-width:991px){
 
 .home-header .left-menu .overlay-content {padding: 20% 2.5%;}
@@ -860,7 +861,10 @@ footer .footer-left .project-describe p {width: 100%;	margin-left: 0;}
 
 }
 
-
+@media(min-width:1199px) and (max-width:1480px){
+	footer .footer-right{width:40%}
+	.design-content-sec ul li.for-bg{width:50%}
+}
 
 
 
