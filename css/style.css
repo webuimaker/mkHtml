@@ -30,7 +30,7 @@ a:hover, li:hover, button:hover{-webkit-transition: all 0.5s;
 -o-transition: all 0.5s;
 transition: all 0.5s;}
 
-
+.sectionlr{padding:0px 40px}
 
 .overlay {
     height: 100%;
@@ -88,8 +88,8 @@ html body{font-size: 16px;font-family: 'Roboto', sans-serif; font-weight:400; co
 body.home{background:url(../images/body-bg-image.jpg)repeat; background-position:center;position: relative; float: left;width: 100%;height: 100%;}
 body.home div canvas {width: 100% !important;  position:absolute; left:0; top:auto; z-index:-1	}
 body.home div div canvas {display: none !important;}
-.home-header {float: left;width: 100%;padding: 40px;}
-.inner-home-sec {padding: 0;}
+.home-header {float: left;width: 100%;padding: 40px; }
+.inner-home-sec {padding: 0; width:100%;}
 body.inner-page .inner-home-sec {padding: 0;}
 .home-header .left-menu {float: left;}
 .home-header .left-menu {float: left;}
@@ -115,7 +115,7 @@ body.inner-page .inner-home-sec {padding: 0;}
     bottom: 40px;
     left: 40px;}
 .home-bottom-sec ul {	padding: 0;	margin: 0;}
-.home-bottom-sec ul li {float: left;list-style: none; width: 33.3%;}
+.home-bottom-sec ul li {float: left;list-style: none; padding-left:40px;}
 .home-bottom-sec ul li:first-child a img{margin:30px 0 0;}
 .home-bottom-sec ul li.drop-icon {text-align: center;}
 .home-bottom-sec ul li.drop-icon a {background: #f6f6f6;display: inline-block;border-radius: 50%;position: relative;width: 62px;height: 62px;}
@@ -153,9 +153,9 @@ body	 .overlay-content .inner-sec-overlay a:hover span.sub-link{color:#2982a6;}
 
 /*------------------------ About Page CSS Start Here ------------------------*/
 
-body.inner-page{background:url(../images/inner-body-bg-img.jpg)no-repeat; background-size:100% 100%; background-position:center;position: relative;}
+body.inner-page{/*background:url(../images/inner-body-bg-img.jpg)no-repeat; background-size:100% 100%; background-position:center; */ background:#e9edef;position: relative;}
 .home-header.inner-header .inner-home-sec {padding: 0 0%;}
-.banner-sec {float: left;width: 100%;margin: 40px 0 0;position: relative;}
+.banner-sec {float: left;width: 100%;margin: 0px 0 0;position: relative;}
 .banner-sec img {width: 100%;}
 .banner-sec .caption {position: absolute;top: 0;width: 100%;left: 0;max-width: 1170px;right: 0;margin: 0 auto;padding: 0 80px;height: 100%;}
 
@@ -206,7 +206,7 @@ body.inner-page{background:url(../images/inner-body-bg-img.jpg)no-repeat; backgr
 	background-size: cover;}
 
 
-.multiple-project-sec {float: left;	width: 100%;}
+.multiple-project-sec {float: left;	width: 100%; }
 .multiple-project-sec p{font-family: 'Roboto', sans-serif; font-weight:300;font-size:20px; line-height:40px; }
 .multiple-project-sec p:nth-child(2) {margin: 0;}
 .multiple-project-sec .inner-about-sec {padding: 50px 70px;}
@@ -239,7 +239,7 @@ margin: 60px 0 0;}
 /*------------------------ Contact Us CSS Start Here ------------------------*/
 
 .get-contact {float: none;width: 100%;max-width: 1810px;display:block;background: #e9edef;position: absolute;left: 0;right: 0;margin: 0 auto;
-	z-index: 9;	top: 0px; height:100%; padding:40px;}
+	z-index: 9;	top: 0px; height:100%; padding:40px; height:100vh}
 .home-header.contact-body {margin: 0 0 30px;}
 .get-contact .inner-contact {padding:0px; float: left; width: 100%; height:100%; background:#2982a6}
 .for-close-btn{float:right;  text-align:right; margin: 20px 20px 45px;}
@@ -282,11 +282,17 @@ border-top: none;border-right: none;border-bottom: 1px solid #fff;padding: 0 0 1
 .home-header.project-header .button-sec a.get-touch {background: #272b2d;}
 .home-header.project-header .button-sec a.get-touch:hover{background:#000;}
 
-.project-middle-sec {float: left;width: 100%;padding: 70px 0 0;}
-.project-middle-sec ul {padding: 0;margin: 0;}
-.project-middle-sec ul li {display: inline-block;width: 33%;vertical-align: top;text-align: left;}
+.project-middle-sec {width: 100%;
+    padding: 70px 0 0;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;}
+.project-middle-sec ul {padding: 0;margin: 0;     display: flex;
+    flex-direction: row;
+    align-items: center;}
+.project-middle-sec ul li {display: inline-block;width: 40%;vertical-align: top;text-align: left;}
 .project-middle-sec ul li.bank {width: 10%;vertical-align: top;padding-top: 5%;}
-.project-middle-sec ul li:last-child {width: 43%;text-align: right; vertical-align: top;}
+.project-middle-sec ul li:last-child {width: 33%;text-align: right; vertical-align: top;}
 .project-middle-sec ul li:last-child img {margin: 60px 0 0;}
 .project-middle-sec ul li:nth-child(2) {vertical-align: top;}
 .project-middle-sec ul li.bank p {margin: 0;color: #fff;writing-mode: vertical-lr;transform: rotate(180deg);padding: 15px 0 0; float:left;
@@ -294,14 +300,14 @@ border-top: none;border-right: none;border-bottom: 1px solid #fff;padding: 0 0 1
 .project-middle-sec ul li.bank span.for-border{position: relative; display:inline-block;}
 .project-middle-sec ul li.bank span.for-border:before{position:absolute; content:""; width:1px; height:20px; background:#fff; left:13px;bottom: -150px;}
 
-.project-middle-sec ul li h2 {margin: 0 0 40px;color: #c1eff7;text-transform: uppercase;font-size: 52px;line-height: 56px;font-weight: 400;}
+.project-middle-sec ul li h2 {margin: 0 0 40px;color: #c1eff7;text-transform: uppercase;font-size: 52px;line-height: 56px;font-weight: 400; text-align:left}
 .project-middle-sec ul li h2 span {text-transform: initial;}
 .project-middle-sec ul li h2 span.world-bank {font-weight: 700;color: #085571;}
 .project-middle-sec ul li a.view-case {display: inline-block;	color: #fff;background: #b11c32;line-height: 20px;text-transform: uppercase;
 	font-weight: 300;font-size: 14px;padding: 8px 30px;border-radius: 40px; border:2px solid #b11c32;}
 .project-middle-sec ul li a.view-case:hover{text-decoration:none; background:transparent; color:#b11c32;}
 
-.home-bottom-sec.project-bottom {margin: 120px 0 0; position:initial;padding-bottom: 40px;}	
+.home-bottom-sec.project-bottom { position:initial;padding-bottom: 40px;}	
 .home-bottom-sec.project-bottom ul li:last-child {text-align: right;}
 .home-bottom-sec.project-bottom ul li:last-child p {color: #fff;font-family: 'Times New Roman';font-weight: bold;font-size: 16px;max-width: 50px;
 	text-align: center;line-height: 18px;float: right;width: 100%;}
@@ -321,7 +327,7 @@ border-top: none;border-right: none;border-bottom: 1px solid #fff;padding: 0 0 1
 
 .project-2{background:url(../images/project-bg-2.jpg)no-repeat;background-size:100% 100%; background-position:center;position: relative;}
 .project-2 .project-middle-sec ul li h2 {color: #defffe;margin: 0;}
-.project-2 .project-middle-sec ul li h2 span.world-bank {text-transform: uppercase;color: #015a65;}
+.project-2 .project-middle-sec ul li h2 span.world-bank {text-transform: uppercase;color: #defffe;}
 .project-2 .project-middle-sec ul li:nth-child(2) {	width: 38%;}
 .project-2 .project-middle-sec ul li:nth-child(2)  p{text-transform:uppercase; font-weight:400; color:#015a65; margin: 20px 0 50px; background:#e6f8f8; 
 float:left; width:100%; text-align:center;letter-spacing: 10px; padding: 4px 10px;}
@@ -354,19 +360,20 @@ body.home.work-project.for-pro:before{position: absolute;content: "";width: 70px
 body.home.work-project::before {position: absolute;content: "";width: 70px;background: #e9edef;left: 0;top: 0;height: 100%;position: fixed;
 	box-shadow: 0 0 2px 2px #c8cccd; display: none;}
 	
-body.home.work-project .inner-home-sec {padding: 0 0%;}
+body.home.work-project .inner-home-sec {padding: 0 0%; width:100%;}
 body.home.work-project.for-pro .inner-home-sec {padding: 0 3%;}
 body.home.work-project.for-pro header.home-header .inner-home-sec {padding-left: 1.2%;}
 body.home.work-project.for-pro .project-middle-sec.for-others .inner-home-sec,
 body.home.work-project.for-pro .home-bottom-sec .inner-home-sec {padding-left: 1.2% !important;}
-body.home.work-project .home-header{position: relative;padding: 42px 0 0 0px;}
+body.home.work-project .home-header{position: relative;padding:40px 40px 0px;}
 body.home.work-project .home-bottom-sec{padding-bottom:20%;position: relative; padding-top:9%;}
 body.home.work-project .projects-bottom{padding-bottom: 0;position: absolute;padding-top: 0;bottom: 40px;}
+/*
 body.home.work-project .home-header .left-menu span.toggle-link span {width: 28px;height: 2px;background: #272b2d;display: block;	position: relative;}
 body.home.work-project .home-header .left-menu span.toggle-link span:before,
 body.home.work-project .home-header .left-menu span.toggle-link span:after{position:absolute; content:""; background: #272b2d;width: 28px;height: 2px; left:0; }	
 body.home.work-project .home-header .left-menu span.toggle-link span:before{top:-7px;}
-body.home.work-project .home-header .left-menu span.toggle-link span:after{bottom:-7px;}
+body.home.work-project .home-header .left-menu span.toggle-link span:after{bottom:-7px;}*/
 body.home.work-project .home-header .left-menu span.toggle-link span:hover{cursor:pointer;}
 
 .project-middle-sec.for-others ul li.bank p {color: #272b2d;text-transform: uppercase;font-size: 14px;font-weight: 300; 
@@ -532,8 +539,18 @@ body.home.work-project.innrt-case .bottom-overlay ul li a {display: block;margin
 	display: block;
 }
 
-
-
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.home-header.fixed{
+	
+	position:fixed;
+	z-index:9
+}
 
 
 /*------------------------Case Study CSS End Here ------------------------*/
@@ -583,8 +600,8 @@ body.home.work-project.innrt-case .bottom-overlay ul li a {display: block;margin
 .project-middle-sec.for-others ul li.inform-bumper {width: 88% !important;}
 
 .project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul.for-view li:first-child {width: 21%;margin: 110px 0 0;}
-.case-banner-sec, .challenge-sec, .my-role-sec,
-.solution-sec, .design-sec, .outcome-sec, .whiteboard-sec, .dashboard-sec {padding-left:0%;}
+/*.case-banner-sec, .challenge-sec, .my-role-sec,
+.solution-sec, .design-sec, .outcome-sec, .whiteboard-sec, .dashboard-sec {padding-left:0%;}*/
 footer .footer-left {width: 58.5%;} 
 footer .footer-left .upcoming-project {max-width: 100%;padding: 0px 30px;}
 footer .footer-left .project-describe h2 {font-size: 32px;}
@@ -634,9 +651,9 @@ body.home.work-project .home-bottom-sec {padding-top: 14%;}
 .project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul.for-view li:first-child h2{font-size:60px;}
 .project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul.for-view li:nth-child(2)::before {width:520px;}
 .project-middle-sec.for-others ul li ul.for-view li:nth-child(2) {float: left;}
-
+/*
 .case-banner-sec, .challenge-sec, .my-role-sec, .solution-sec, .design-sec, .outcome-sec ,
-.whiteboard-sec, .dashboard-sec{padding-left: 0%;}
+.whiteboard-sec, .dashboard-sec{padding-left: 0%;}*/
 .case-banner-sec .case-bg-sec {padding: 40px 40px 40px;}
 .my-role-sec ul li:first-child {width: 100%;}
 .my-role-sec h3.case-heading {margin-top: 40px;}
@@ -708,7 +725,7 @@ body.home.work-project .projects-bottom {position:relative;}
 .project-middle-sec.for-others ul li.viu-inner ul.for-view li.viu-img::before {width: 380px;}
 .project-middle-sec.for-others ul li.for-dapip-center.for-bcbs p.database.bluecross {font-size: 22px;	margin-left: 10px;}
 .get-contact {height:auto}	
-
+.project-middle-sec ul{display:block}
 	
 }
 
@@ -744,8 +761,8 @@ body.home.work-project .projects-bottom {position:relative;}
 .project-middle-sec.for-others ul li.for-dapip-center.for-bcbs ul.for-view li:nth-child(2)::before {left:0px;width: 330px;}
 .project-middle-sec.for-others ul li.for-dapip-center.for-bcbs p.database.bluecross {font-size: 20px;padding: 0 0 0 30px;	margin-left: 0;}
 .case-banner-sec h1 span {font-size: 30px;margin: 5px 0 0;}
-.case-banner-sec, .challenge-sec, .my-role-sec, .solution-sec, .design-sec, .outcome-sec,
-.whiteboard-sec, .dashboard-sec {padding-left: 0%;}
+/*.case-banner-sec, .challenge-sec, .my-role-sec, .solution-sec, .design-sec, .outcome-sec,
+.whiteboard-sec, .dashboard-sec {padding-left: 0%;}*/
 .challenge-sec h3 {font-size: 24px;}
 .challenge-sec p {font-size: 16px;line-height: 30px;}
 h3.case-heading {font-size: 24px;}
@@ -789,12 +806,12 @@ p.case-para {line-height: 30px;	font-size: 16px;}
 .home-header .left-menu .overlay-content {padding: 30% 2.5%;}
 .banner-sec .caption .banner-desc p {font-size: 12px;}	
 .banner-sec .caption .heading-caption h2 {font-size: 26px;}
-.grooving-sec .inner-about-sec li.for-img {padding: 37% 0;}
+.grooving-sec .inner-about-sec li.for-img {padding: 37% 0; background-size:90%}
 .project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2):before {width: 360px;height: 295px;}
 .project-middle-sec.for-others ul li.for-dapip-center ul li:nth-child(2) p.department {max-width: 307px;	font-size: 11px;}
 .project-middle-sec.for-others ul li.for-dapip-center ul.for-view li:nth-child(2) img {max-width: 150px;	margin: 40px 0 0;}
-.case-banner-sec, .challenge-sec, .my-role-sec, .solution-sec, .design-sec, .outcome-sec,
-.whiteboard-sec, .dashboard-sec {padding-left: 0%;}
+/*.case-banner-sec, .challenge-sec, .my-role-sec, .solution-sec, .design-sec, .outcome-sec,
+.whiteboard-sec, .dashboard-sec {padding-left: 0%;}*/
 .my-role-sec ul li:last-child {background-position: center;}
 .project-middle-sec.for-others ul li ul.for-view li:nth-child(2).inner-dapip-proj p.database {max-width: 200px;}
 .project-middle-sec.for-others ul li ul.for-view li:nth-child(2).inner-dapip-proj::before {width: 240px;height: 190px;}
